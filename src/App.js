@@ -66,7 +66,11 @@ function App() {
           <td>Va + Vb</td>
           <td>{toBin(toDec(A) + toDec(B), A.length)}</td>
           <td>{toDec(A) + toDec(B) >= Math.pow(2, A.length) ? "1" : "0"}</td>
-          <td>N/A</td>
+          <td>
+            {A[0] === B[0] && A[0] !== toBin(toDec(A) + toDec(B), A.length)[0]
+              ? "1"
+              : "0"}
+          </td>
           <td>{toBin(toDec(A) + toDec(B), A.length)[0]}</td>
           <td>{isPair(toBin(toDec(A) + toDec(B), A.length))}</td>
           <td>{toDec(A) + toDec(B) === 0 ? "1" : "0"}</td>
@@ -75,7 +79,11 @@ function App() {
           <td>Va - Vb</td>
           <td>{toBin(toDec(A) - toDec(B), A.length)}</td>
           <td>{toDec(A) - toDec(B) >= Math.pow(2, A.length) ? "1" : "0"}</td>
-          <td>N/A</td>
+          <td>
+            {A[0] !== B[0] && A[0] !== toBin(toDec(A) - toDec(B), A.length)[0]
+              ? "1"
+              : "0"}
+          </td>
           <td>{toBin(toDec(A) - toDec(B), A.length)[0]}</td>
           <td>{isPair(toBin(toDec(A) - toDec(B), A.length))}</td>
           <td>{toDec(A) - toDec(B) === 0 ? "1" : "0"}</td>
