@@ -6,6 +6,15 @@
   justify-content: center;
 }
 
+.row {
+  display: flex;
+  margin: 5px;
+}
+
+.margin {
+  margin: 0 10px;
+}
+
 table {
   border: 1px solid black;
   margin: 15px;

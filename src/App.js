@@ -24,34 +24,40 @@ function App() {
       <header>
         <h1>Sistemas digitais 2020.1 - EL2 é a melhor turma</h1>
       </header>
-      Va:
-      <input
-        type="text"
-        value={A}
-        onChange={(e) => {
-          const { data, inputType } = e.nativeEvent;
-          if (inputType === "deleteContentBackward") {
-            setA(A.slice(0, A.length - 1));
-          }
-          if (data === "0" || data === "1") {
-            setA(A + data);
-          }
-        }}
-      />
-      Vb:
-      <input
-        type="text"
-        value={B}
-        onChange={(e) => {
-          const { data, inputType } = e.nativeEvent;
-          if (inputType === "deleteContentBackward") {
-            setB(B.slice(0, B.length - 1));
-          }
-          if (data === "0" || data === "1") {
-            setB(B + data);
-          }
-        }}
-      />
+      <div className="row">
+        Va:
+        <input
+          className="margin"
+          type="text"
+          value={A}
+          onChange={(e) => {
+            const { data, inputType } = e.nativeEvent;
+            if (inputType === "deleteContentBackward") {
+              setA(A.slice(0, A.length - 1));
+            }
+            if (data === "0" || data === "1") {
+              setA(A + data);
+            }
+          }}
+        />
+      </div>
+      <div className="row">
+        Vb:
+        <input
+          className="margin"
+          type="text"
+          value={B}
+          onChange={(e) => {
+            const { data, inputType } = e.nativeEvent;
+            if (inputType === "deleteContentBackward") {
+              setB(B.slice(0, B.length - 1));
+            }
+            if (data === "0" || data === "1") {
+              setB(B + data);
+            }
+          }}
+        />
+      </div>
       <table>
         <tr>
           <th></th>
